@@ -8,25 +8,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
+
+    <div class="background-container">
+
 <header id="header">
-    <div class="logo">
-        <img src="/public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.png" alt="LOGO DE JAVIER ALZU PORTFOLIO">
-    </div>
     <nav id="nav">
-        <ul class="nav__list">
-            <li class="nav__item"><a href="#">Inicio</a></li>
-            <li class="nav__item"><a href="#">Trabajos</a></li>
-            <li class="nav__item"><a href="#">Sobre mi</a></li>
-            <li class="nav__item"><a href="#">Contacto</a></li>
+        <div class="logo">
+            <img src="/public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.png" alt="LOGO DE JAVIER ALZU PORTFOLIO">
+        </div>
+        <ul class="nav__list" id="nav-list">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Trabajos</a></li>
+            <li><a href="#">Sobre mi</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
         <div class="nav__button">
-            <img src="/public/imagenes/menu_40dp_000000_FILL0_wght400_GRAD0_opsz40.svg" alt="" class="nav__menu" id="nav-menu">
+            <img src="/public/imagenes/logo/menu_34dp_D9D9D9_FILL0_wght400_GRAD0_opsz40.svg" alt="" class="nav__menu" id="nav-menu">
         </div>
     </nav>
+
+<section class="hero" id="hero">
+    <div class="hero__container">
+        <div class="hero__title">
+            <h1>Hola<span class="color-primary">!</span> soy  <span class="color-primary">Javier Alzú</span>, desarollador web.</h1>
+        </div>
+        <div class="hero__subtitle"><p>Aplico técnicas de diseño UI/UX, código limpio y rápido, optimización SEO y otras habilidades que hacen que cada proyecto sea único y efectivo..
+        </p></div>
+        
+        <div class="hero__links">
+            <a href=""><img src="/public/imagenes/github-brands-solid (1).svg" alt=""></a>
+            <a href=""><img src="/public/imagenes/linkedin-in-brands-solid.svg" alt=""></a>
+        </div>
+    </div>
+</section>
+<div class="section-divider"></div>
 </header>
 
+
+<main class="proyectos" id="proyectos">
+    <h2 class="section__title">Mis Proyectos</h2>
+<div class="proyectos__grid container">
+    <div class="proyectos__box">
+        <div class="proyecto__img"><img src="/public/imagenes/proyectos/freepik-export-20241016221354ZNrN-removebg-preview.png" alt=""></div>
+        <div class="proyecto__description">
+            <h3>Un sitio web de marketing digital</h3>
+            <a href="#" class="proyecto__link">ver sitio web</a>
+            <div class="description__box">
+                <div class="description__box__item">
+                    <span>UX / UI</span>
+                </div>
+                <div class="description__box__item">
+                    <span>BUILD</span>
+                </div>
+                <div class="description__box__item">
+                    <span>SEO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="proyectos__box">
+        <div class="proyecto__img"><img src="/public/imagenes/proyectos/freepik-export-20241016221354ZNrN-removebg-preview.png" alt=""></div>
+        <div class="proyecto__description">
+            <h3>Un sitio web de marketing digital</h3>
+            <a href="#" class="proyecto__link">ver sitio web</a>
+
+            <div class="description__box">
+                <div class="description__box__item">
+                    <span>UX / UI</span>
+                </div>
+                <div class="description__box__item">
+                    <span>BUILD</span>
+                </div>
+                <div class="description__box__item">
+                    <span>SEO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="proyectos__box">
+        <div class="proyecto__img"><img src="/public/imagenes/proyectos/freepik-export-20241016220142CCMo-removebg-preview.png" alt=""></div>
+        <div class="proyecto__description">
+            <h3>Un sitio web de marketing digital</h3>
+            <a href="#" class="proyecto__link">ver sitio web</a>
+
+            <div class="description__box">
+                <div class="description__box__item">
+                    <span>UX / UI</span>
+                </div>
+                <div class="description__box__item">
+                    <span>BUILD</span>
+                </div>
+                <div class="description__box__item">
+                    <span>SEO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+</div>
+
+
+<script src="script/script.js"></script>
 </body>
 </html>

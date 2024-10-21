@@ -1,0 +1,106 @@
+.hero{
+    .hero__container{
+        display: flex;
+        padding-inline: $padding-inline-mobile;
+        flex-direction: column;
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+        width: 100%;
+
+        
+        .hero__title h1{
+            margin-bottom: 2.3rem;
+            line-height: 1.1;
+            font-size: clamp(3.2rem,4.3vw,4.3rem);
+            max-width: 95%;
+            color: $color-white;
+            
+            span{
+                font-family: $ff-primary;
+            }
+        }
+
+        .hero__subtitle p{
+            font-size: 1.3rem;
+        }
+
+        .hero__links{
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-top: 3rem;
+
+            img{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+
+@include respond-to(tablet){
+    .hero{
+        .hero__container{
+            margin-top: 4rem;
+            .hero__title h1{
+                text-align: center;
+            }
+            .hero__subtitle p{
+                text-align: center;
+            }
+            
+        }
+    }
+}
+
+
+@include respond-to(desktop){
+.hero{
+    .hero__container{
+        margin-top: 3.5rem;
+        
+
+        .hero__title h1{
+            max-width: 70%;
+        }
+
+        .hero__subtitle p{
+            max-width: 70%;
+            margin-bottom: 1rem;
+        }
+    }
+}
+}
+
+@include respond-to(large-desktop){
+    .hero{
+        .hero__container{
+        padding-inline: $padding-inline-desktop;
+            align-items: center;
+            margin-top: 5rem;
+            flex-direction: row;
+            width: 100%;
+            .hero__title h1{
+                margin-bottom: 0;
+                max-width: 100%;
+            }
+
+            .hero__subtitle p{
+                margin-top: 2rem;
+                margin-left: 5rem;
+            }
+
+            .hero__links{
+                flex-direction: column;
+                gap: 2rem;
+                margin-top: 0;
+                img{
+                    display: block;
+                    max-width: 55px;
+                    max-height: 55px;
+                }
+            }
+        }
+    }
+}
