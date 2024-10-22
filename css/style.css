@@ -472,8 +472,8 @@ nav .show-menu {
     margin-bottom: 0;
   }
   .about .about__img img {
-    width: 240px;
-    height: 240px;
+    width: 250px;
+    height: 250px;
   }
   .about .about__description {
     margin-bottom: 0rem;
@@ -499,7 +499,7 @@ nav .show-menu {
   padding-bottom: 4rem;
 }
 .contact h3 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   line-height: 1.2;
   margin-bottom: 2.5rem;
 }
@@ -510,7 +510,7 @@ nav .show-menu {
 .contact form .form__group {
   display: flex;
   flex-direction: column;
-  margin-block: 1rem;
+  margin-block: 1.4rem;
   width: 90%;
 }
 .contact form .form__group label {
@@ -519,13 +519,13 @@ nav .show-menu {
   font-weight: 700;
 }
 .contact form .form__group input {
-  padding: 0.5rem;
+  padding: 0.6rem;
   background-color: transparent;
   outline: none;
   border: none;
   border-bottom: 1px solid #D2D2D2;
-  margin-top: 0.4rem;
-  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  font-size: 1.3rem;
   color: #D2D2D2;
 }
 .contact form .form__group input:focus {
@@ -537,7 +537,7 @@ nav .show-menu {
   font-family: "Nunito", sans-serif;
   border: none;
   border-bottom: 1px solid #EAEAEA;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 0.5rem;
 }
 .contact form .form__group textarea:focus {
@@ -555,6 +555,9 @@ nav .show-menu {
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
+  .contact h3 {
+    max-width: 70%;
+  }
   .contact form .form__group {
     width: 80%;
     margin-block: 1.5rem;
@@ -591,13 +594,26 @@ nav .show-menu {
 }
 @media (min-width: 1300px) {
   .contact {
-    max-width: 1400px;
+    margin-top: 3rem;
+    max-width: 1550px;
     margin-left: auto;
     margin-right: auto;
+    gap: 6rem;
+  }
+  .contact h3 {
+    font-size: 2.2rem;
   }
   .contact form {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .contact form .desktop__group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .contact form .form__group {
+    width: 100%;
+    margin-block: 2rem;
   }
 }
 
