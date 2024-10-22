@@ -5,10 +5,26 @@
   border: 1px solid #00D8F5;
 }
 
+.submit-btn {
+  margin-top: 1.3rem;
+  width: 160px;
+  background-color: #00D8F5;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .submit-btn {
+    margin-left: 1rem;
+  }
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -34,6 +50,7 @@ body {
   color: #D2D2D2;
   line-height: 1.4;
   background-color: rgb(19, 19, 19);
+  font-family: "Nunito", sans-serif;
 }
 
 ::selection {
@@ -80,7 +97,7 @@ h2 {
   font-weight: 600;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, button {
   font-family: "Raleway", sans-serif;
 }
 
@@ -264,9 +281,8 @@ nav .show-menu {
   padding: 0.5rem;
   border-radius: 7px;
   display: flex;
-  text-align: center;
+  text-align: start;
   flex-direction: column;
-  align-items: center;
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -298,7 +314,6 @@ nav .show-menu {
   display: flex;
   margin-top: 5rem;
   margin-bottom: 2rem;
-  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
@@ -318,6 +333,9 @@ nav .show-menu {
 @media (min-width: 668px) and (max-width: 1024px) {
   .proyectos .proyectos__grid {
     padding-inline: 5vw;
+  }
+  .proyectos .proyectos__grid .proyectos__box {
+    align-items: center;
   }
   .proyectos .proyectos__grid .proyectos__box .proyecto__description h3 {
     font-size: 2rem;
@@ -411,9 +429,11 @@ nav .show-menu {
   backdrop-filter: blur(2.6px);
   -webkit-backdrop-filter: blur(2.6px);
   border: 1px solid rgba(255, 255, 255, 0.11);
-  justify-content: flex-start;
   padding-block: 1.4rem;
   padding-inline: 0.5rem;
+}
+.about .about__description .about__tecnologias ul li {
+  width: calc(25% - 1.5rem);
 }
 .about .about__description .about__tecnologias img {
   width: 45px;
@@ -469,6 +489,115 @@ nav .show-menu {
   .about .about__description .about__tecnologias img {
     width: 55px;
     height: 55px;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 6vw;
+  height: 100%;
+  padding-bottom: 4rem;
+}
+.contact h3 {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+.contact form .form__group {
+  display: flex;
+  flex-direction: column;
+  margin-block: 1rem;
+  width: 90%;
+}
+.contact form .form__group label {
+  color: #EAEAEA;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.contact form .form__group input {
+  padding: 0.5rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #D2D2D2;
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  color: #D2D2D2;
+}
+.contact form .form__group input:focus {
+  border-bottom: 1px solid #00D8F5;
+}
+.contact form .form__group textarea {
+  background-color: transparent;
+  color: #EAEAEA;
+  font-family: "Nunito", sans-serif;
+  border: none;
+  border-bottom: 1px solid #EAEAEA;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.contact form .form__group textarea:focus {
+  border-bottom: 1px solid #00D8F5;
+}
+.contact .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .contact form .form__group {
+    width: 80%;
+    margin-block: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 1025px) {
+  .contact {
+    padding-top: 4rem;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .contact h3 {
+    max-width: 60%;
+    font-size: 1.9rem;
+  }
+  .contact form {
+    width: 100%;
+  }
+  .contact form .form__group {
+    margin-block: 1.5rem;
+  }
+  .contact form .form__group label {
+    font-size: 1.4rem;
+  }
+  .contact form .form__group input {
+    padding: 0.8rem;
+    font-size: 1.3rem;
+  }
+  .contact form .form__group textarea {
+    padding: 0.8rem;
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1300px) {
+  .contact {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact form {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 

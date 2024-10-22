@@ -1,5 +1,70 @@
 .contact{
-    .sr-only {
+  display: flex;
+  flex-direction: column;
+  padding-inline: $padding-inline-mobile;
+  height: 100%;
+  padding-bottom: 4rem;
+
+  h3{
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+
+    .form__group{
+      display: flex;
+      flex-direction: column;
+      margin-block: 1rem;
+      width: 90%;
+      
+      
+      label{
+        color: $color-white;
+        font-size: 1.3rem;
+        font-weight: $fw-bold;
+      }
+
+      input{
+        padding: .5rem;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $color-white-light;
+        margin-top: .4rem;
+        font-size: 1.2rem;
+        color: $color-white-light;
+
+        &:focus{
+          border-bottom: 1px solid $color-primary;
+        }
+      }
+      
+              textarea{
+                background-color: transparent;
+                color: $color-white;
+                font-family: $ff-secondary;
+                border: none;
+                border-bottom: 1px solid $color-white;
+                font-size: 1.2rem;
+                padding: .5rem;
+
+                &:focus{
+                  border-bottom: 1px solid $color-primary;
+                }
+              }
+    }
+
+   
+  }
+
+
+
+
+ .sr-only {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -9,4 +74,66 @@
         clip: rect(0, 0, 0, 0);
         border: 0;
       }
+}
+
+
+@include respond-to(tablet){
+  .contact{
+    form{
+      .form__group{
+        width: 80%;
+        margin-block: 1.5rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+
+@include respond-to(desktop){
+  .contact{
+    padding-top: 4rem;
+    flex-direction: row;
+    gap: 2rem;
+
+    h3{
+      max-width: 60%;
+      font-size: 1.9rem;
+    }
+
+    form{
+      width: 100%;
+
+      .form__group{
+        margin-block: 1.5rem;
+
+        label{
+          font-size: 1.4rem;
+        }
+        input{
+          padding: .8rem;
+          font-size: 1.3rem;
+        }
+        textarea{
+          padding: .8rem;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+
+@include respond-to(large-desktop){
+  .contact{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    form{
+      flex-direction: row;
+      flex-wrap: wrap;
+      .form__group{
+      }
+    }
+  }
 }
