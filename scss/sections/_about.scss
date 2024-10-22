@@ -1,0 +1,125 @@
+.about{
+    height: 100%;
+    padding-inline: $padding-inline-mobile;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+
+
+    .about__img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:2.5rem;
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .about__description{
+        line-height: 1.5;
+        margin-bottom: 3rem;
+
+        p{
+            font-size: 1.2rem;
+        }
+
+    .about__tecnologias{
+        margin-top: 3rem;
+        h3{
+            margin-bottom: 1.3rem;
+            color: $color-white;
+            font-size: 1.5rem;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            @include glass-effect();
+            justify-content: flex-start;
+            padding-block: 1.4rem;
+            padding-inline: .5rem;
+        }
+
+        img{
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+
+}
+
+
+@include respond-to(tablet){
+    .about{
+        .about__img{
+            margin-bottom: 3rem;
+
+            img{
+                width: 230px;
+                height: 230px;
+            }
+        }
+        .about__description{
+
+            .about__tecnologias{
+                width: 100%;
+                ul{
+                    margin-top: 1.5rem;
+                    width: 100%;
+                    flex-wrap: nowrap;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+        }
+}
+
+
+@include respond-to(desktop){
+    .about{
+        flex-direction: row;
+        align-items: flex-start;
+        padding-inline: $padding-inline-mobile;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 0;
+
+        .about__img{
+            margin-top: -1rem;
+            margin-bottom: 0;
+
+            img{
+                width: 240px;
+                height: 240px;
+            }
+        }
+
+        .about__description{
+            margin-bottom: 0rem;
+
+            .about__tecnologias{
+                margin-top: 4rem;
+
+                ul{
+                    gap: 3rem;
+                    flex-wrap: nowrap;
+                    padding-inline: 1rem;
+                }
+                
+                img{
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
+    }
+}
