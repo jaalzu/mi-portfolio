@@ -59,6 +59,12 @@ footer{
 
                 li a{
                     color: $color-white;
+                    transition: 0.2s ease;
+
+                    &:hover{
+                        color: $color-primary;
+                    }
+
                 }
         }    
         .nav__links.desktop{
@@ -148,6 +154,10 @@ footer{
                 gap: 2.5rem;
                 img{
                     width: 35px;
+                    transition: 0.2s ease;
+                    &:hover{
+                        transform: translateY(-6px);
+                    }
                 }
             }
         }

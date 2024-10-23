@@ -11,6 +11,10 @@ body {
     color: $color-black; 
   }
 
+strong{
+  color: $color-white;
+}
+
 .container{
   max-width: 1400px;
 }

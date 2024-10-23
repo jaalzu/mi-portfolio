@@ -40,8 +40,25 @@
 
                 .proyecto__link{
                     color: $color-white;
+                    display: inline-flex;
+                    align-items: center;
                     text-decoration: underline;
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
+                    gap: .5rem;
+                    transition: .3s ease-in;
+                    &:hover{
+                        text-decoration: 1px solid underline $color-primary;
+                    }
+
+                    img{
+                        width: 20px;
+                    transition: .3s ease;
+
+                    }
+
+                    &:hover img{
+                        transform: translateX(10px);
+                    }
                 }
 
                 .description__box{

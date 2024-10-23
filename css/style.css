@@ -8,11 +8,18 @@
 .submit-btn {
   margin-top: 1.3rem;
   width: 160px;
+  display: inline-block;
   background-color: #00D8F5;
   padding: 0.9rem;
-  border-radius: 8px;
+  border-radius: 7px;
   font-size: 1rem;
   border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+.submit-btn:hover {
+  transform: scale(1.08);
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
@@ -56,6 +63,10 @@ body {
 ::selection {
   background-color: #00D8F5;
   color: rgb(19, 19, 19);
+}
+
+strong {
+  color: #EAEAEA;
 }
 
 .container {
@@ -122,6 +133,7 @@ nav {
 }
 nav .logo {
   width: 100px;
+  cursor: pointer;
   z-index: 3;
 }
 nav .nav__list {
@@ -145,6 +157,10 @@ nav .nav__list li a {
   color: #EAEAEA;
   font-size: 1.4rem;
   font-weight: 700;
+  transition: 0.2s ease;
+}
+nav .nav__list li a:hover {
+  color: #00D8F5;
 }
 nav .nav__button {
   z-index: 3;
@@ -211,6 +227,10 @@ nav .show-menu {
 .hero .hero__container .hero__links img {
   width: 35px;
   height: 35px;
+  transition: 0.3s ease;
+}
+.hero .hero__container .hero__links img:hover {
+  transform: translateY(-6px);
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
@@ -318,6 +338,10 @@ footer .footer__nav ul {
 }
 footer .footer__nav ul li a {
   color: #EAEAEA;
+  transition: 0.2s ease;
+}
+footer .footer__nav ul li a:hover {
+  color: #00D8F5;
 }
 footer .footer__nav .nav__links.desktop {
   display: none;
@@ -385,6 +409,10 @@ footer .footer__me {
   }
   .footer .footer__nav .nav__links.desktop img {
     width: 35px;
+    transition: 0.2s ease;
+  }
+  .footer .footer__nav .nav__links.desktop img:hover {
+    transform: translateY(-6px);
   }
   .footer .footer__links {
     display: none;
@@ -434,8 +462,22 @@ footer .footer__me {
 }
 .proyectos .proyectos__grid .proyectos__box .proyecto__description .proyecto__link {
   color: #EAEAEA;
+  display: inline-flex;
+  align-items: center;
   text-decoration: underline;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  gap: 0.5rem;
+  transition: 0.3s ease-in;
+}
+.proyectos .proyectos__grid .proyectos__box .proyecto__description .proyecto__link:hover {
+  text-decoration: 1px solid underline #00D8F5;
+}
+.proyectos .proyectos__grid .proyectos__box .proyecto__description .proyecto__link img {
+  width: 20px;
+  transition: 0.3s ease;
+}
+.proyectos .proyectos__grid .proyectos__box .proyecto__description .proyecto__link:hover img {
+  transform: translateX(10px);
 }
 .proyectos .proyectos__grid .proyectos__box .proyecto__description .description__box {
   display: flex;

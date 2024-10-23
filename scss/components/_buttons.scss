@@ -1,11 +1,19 @@
 .submit-btn{
     margin-top: 1.3rem;
     width: 160px;
+    display: inline-block;
     background-color: $color-primary;
     padding: .9rem;
-    border-radius: 8px;
+    border-radius: 7px;
     font-size: 1rem;
     border: none;
+    cursor: pointer;
+    font-weight: $fw-bold;
+    transition: .2s ease;
+
+    &:hover{
+        transform: scale(1.08);
+    }
 }
 
 @include respond-to(tablet){
