@@ -1,1 +1,159 @@
-{\rtf1}
+footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-inline: $padding-inline-mobile;
+    margin-top: 3rem;
+    height: auto;
+    
+   .footer__info{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        width: 95px;
+    }
+   
+    .email-container {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      
+        #email {
+          font-size: 1.3rem;
+          color: $color-white;
+        }
+      
+        .tooltip {
+          visibility: hidden;
+          background-color: $color-primary;
+          color: $color-black;
+          text-align: center;
+          border-radius: 8px;
+          padding: 10px;
+          position: absolute;
+          font-weight: $fw-bold;
+          bottom: -90px;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          font-size: 1rem;
+        }
+      
+        &:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    
+   }
+   .footer__nav{
+    ul{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            font-size: 1.8rem;
+            margin-left: -1.3rem;
+
+                li a{
+                    color: $color-white;
+                }
+        }    
+        .nav__links.desktop{
+            display: none;
+        }
+   }
+
+   .footer__links{
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        justify-content: center;
+        margin-block: 1rem;
+    
+        img{
+        width: 35px;
+    }
+   }
+   .footer__me{
+       text-align: center;
+    padding-bottom: 1rem;
+       font-size: 1.1rem;
+   }
+}
+
+
+@include respond-to(tablet){
+    footer{
+        .footer__info{
+            .logo{
+                width: 120px;
+            }
+       
+        .email-container{
+            #email{
+                font-size: 1.8rem;
+            }
+          }
+        }
+
+        .footer__nav{
+            ul{
+                font-size: 2rem;
+                margin-left: -1.8rem;
+            }
+        }
+
+        .footer__links{
+            gap: 3.5rem;
+
+            img{
+                width: 40px;
+            }
+        }
+    }
+}
+
+@include respond-to(desktop){
+    .footer{
+        padding-inline: $padding-inline-desktop;
+
+        .footer__info{
+            margin-bottom: 2rem;
+            .logo{
+                width: 130px;
+            }
+
+            .email-container{
+                #email{
+                    font-size: 2.2rem;
+                }
+                .tooltip{
+                    bottom:-70px
+                }
+            }
+        }
+
+        .footer__nav{
+            margin-bottom: 1rem;
+            ul{
+                flex-direction: row;
+            }
+
+            .nav__links.desktop{
+                display: flex;
+                align-items: center;
+                gap: 2.5rem;
+                img{
+                    width: 35px;
+                }
+            }
+        }
+
+        .footer__links{
+            display: none;
+        }
+    }
+}

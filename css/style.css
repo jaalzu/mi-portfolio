@@ -263,6 +263,133 @@ nav .show-menu {
     max-height: 55px;
   }
 }
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding-inline: 6vw;
+  margin-top: 3rem;
+  height: auto;
+}
+footer .footer__info {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer__info .logo {
+  width: 95px;
+}
+footer .footer__info .email-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+footer .footer__info .email-container #email {
+  font-size: 1.3rem;
+  color: #EAEAEA;
+}
+footer .footer__info .email-container .tooltip {
+  visibility: hidden;
+  background-color: #00D8F5;
+  color: rgb(19, 19, 19);
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  font-weight: 700;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+}
+footer .footer__info .email-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+footer .footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.8rem;
+  margin-left: -1.3rem;
+}
+footer .footer__nav ul li a {
+  color: #EAEAEA;
+}
+footer .footer__nav .nav__links.desktop {
+  display: none;
+}
+footer .footer__links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-block: 1rem;
+}
+footer .footer__links img {
+  width: 35px;
+}
+footer .footer__me {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  footer .footer__info .logo {
+    width: 120px;
+  }
+  footer .footer__info .email-container #email {
+    font-size: 1.8rem;
+  }
+  footer .footer__nav ul {
+    font-size: 2rem;
+    margin-left: -1.8rem;
+  }
+  footer .footer__links {
+    gap: 3.5rem;
+  }
+  footer .footer__links img {
+    width: 40px;
+  }
+}
+@media (min-width: 1025px) {
+  .footer {
+    padding-inline: 3vw;
+  }
+  .footer .footer__info {
+    margin-bottom: 2rem;
+  }
+  .footer .footer__info .logo {
+    width: 130px;
+  }
+  .footer .footer__info .email-container #email {
+    font-size: 2.2rem;
+  }
+  .footer .footer__info .email-container .tooltip {
+    bottom: -70px;
+  }
+  .footer .footer__nav {
+    margin-bottom: 1rem;
+  }
+  .footer .footer__nav ul {
+    flex-direction: row;
+  }
+  .footer .footer__nav .nav__links.desktop {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .footer .footer__nav .nav__links.desktop img {
+    width: 35px;
+  }
+  .footer .footer__links {
+    display: none;
+  }
+}
 .proyectos {
   height: 100%;
   background-repeat: no-repeat;
@@ -539,6 +666,7 @@ nav .show-menu {
   border-bottom: 1px solid #EAEAEA;
   font-size: 1.3rem;
   padding: 0.5rem;
+  resize: none;
 }
 .contact form .form__group textarea:focus {
   border-bottom: 1px solid #00D8F5;

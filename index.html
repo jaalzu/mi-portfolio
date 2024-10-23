@@ -138,7 +138,7 @@
 </div>
 </section>
 
-<section class="contact ">
+<section class="contact">
     <h3>Si te gusto mi trabajo colaboremos juntos en tu proximo proyecto!</h3>
 
     <form action="/enviar-mensaje" method="POST" class="contact-form" id="contact-form">
@@ -162,7 +162,39 @@
         <button type="submit" class="submit-btn">Enviar Mensaje</button>
       </form>
       
-</section>
+    </section>
+    <div class="section-divider"></div>
+
+<footer class="footer" id="footer">
+    <div class="footer__info">
+        <div class="logo">
+            <img src="public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.png" alt="LOGO DE JAVIER ALZU PORTFOLIO">
+        </div>
+     <div class="email-container">
+    <p id="email" onclick="copyToClipboard(this)" onmouseover="showTooltip()" onmouseout="resetTooltip()">javalzu@gmail.com</p>
+    <span class="tooltip" id="tooltip">Haz clic para copiar</span>
+</div>
+    </div>
+    <nav class="footer__nav">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Sobre mi</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="nav__links desktop">
+            <a href=""><img src="public/imagenes/github-brands-solid (1).svg" alt=""></a>
+            <a href=""><img src="public/imagenes/linkedin-in-brands-solid.svg" alt=""></a>
+        </div>
+    </nav>
+        <div class="footer__links mobile">
+            <a href=""><img src="public/imagenes/github-brands-solid (1).svg" alt=""></a>
+            <a href=""><img src="public/imagenes/linkedin-in-brands-solid.svg" alt=""></a>
+        </div>
+        <div class="footer__me">
+            <span>Made by Javier Alzú :) </span>
+        </div>
+</footer>
 <script src="script/script.js"></script>
 </body>
 </html>
