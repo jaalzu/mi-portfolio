@@ -460,43 +460,71 @@ footer .footer__me {
   margin-bottom: 0.7rem;
   line-height: 1.3;
 }
-.proyectos .proyectos__grid .proyectos__box .proyecto__description .proyecto__link {
-  color: #EAEAEA;
-  display: inline-flex;
-  align-items: center;
-  text-decoration: underline;
-  font-size: 1.2rem;
-  gap: 0.5rem;
-  transition: 0.3s ease-in;
+.proyectos .proyectos__grid .proyectos__box .proyecto__description a,
+.proyectos .proyectos__grid .proyectos__box .proyecto__description span {
+  position: relative;
+  transition: all 0.3s ease;
 }
-.proyectos .proyectos__grid .proyectos__box .proyecto__description .proyecto__link:hover {
-  text-decoration: 1px solid underline #00D8F5;
-}
-.proyectos .proyectos__grid .proyectos__box .proyecto__description .proyecto__link img {
-  width: 20px;
-  transition: 0.3s ease;
-}
-.proyectos .proyectos__grid .proyectos__box .proyecto__description .proyecto__link:hover img {
-  transform: translateX(10px);
-}
-.proyectos .proyectos__grid .proyectos__box .proyecto__description .description__box {
+.proyectos .proyectos__grid .proyectos__box .proyecto__description a.arrow,
+.proyectos .proyectos__grid .proyectos__box .proyecto__description span.arrow {
   display: flex;
-  margin-top: 5rem;
+  text-decoration: underline;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #EAEAEA;
+}
+.proyectos .proyectos__grid .proyectos__box .proyecto__description a.arrow .arrow_icon,
+.proyectos .proyectos__grid .proyectos__box .proyecto__description span.arrow .arrow_icon {
+  position: relative;
+  margin-left: 0.5em;
+}
+.proyectos .proyectos__grid .proyectos__box .proyecto__description a.arrow .arrow_icon svg,
+.proyectos .proyectos__grid .proyectos__box .proyecto__description span.arrow .arrow_icon svg {
+  transition: transform 0.3s 0.02s ease;
+  margin-right: 1em;
+}
+.proyectos .proyectos__grid .proyectos__box .proyecto__description a.arrow .arrow_icon::before,
+.proyectos .proyectos__grid .proyectos__box .proyecto__description span.arrow .arrow_icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #EAEAEA;
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
+}
+.proyectos .proyectos__grid .proyectos__box .proyecto__description a.arrow:hover .arrow_icon::before,
+.proyectos .proyectos__grid .proyectos__box .proyecto__description span.arrow:hover .arrow_icon::before {
+  width: 1em;
+}
+.proyectos .proyectos__grid .proyectos__box .proyecto__description a.arrow:hover .arrow_icon svg,
+.proyectos .proyectos__grid .proyectos__box .proyecto__description span.arrow:hover .arrow_icon svg {
+  transform: translateX(0.75em);
+}
+.proyectos .proyectos__grid .proyectos__box .description__box {
+  display: flex;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   gap: 1rem;
   flex-wrap: wrap;
 }
-.proyectos .proyectos__grid .proyectos__box .proyecto__description .description__box .description__box__item {
-  border: 1px solid #00D8F5;
-  width: 90px;
-  height: 40px;
+.proyectos .proyectos__grid .proyectos__box .description__box .description__box__item {
+  -webkit-box-shadow: 2px 6px 26px -18px rgb(0, 216, 245);
+  -moz-box-shadow: 2px 6px 26px -18px rgb(0, 216, 245);
+  box-shadow: 2px 6px 26px -18px rgb(0, 216, 245);
+  border: 1px solid #EAEAEA;
+  width: 92px;
+  height: 42px;
   display: flex;
-  color: #00D8F5;
+  color: #EAEAEA;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  border-radius: 20px;
-  background-color: rgba(57, 57, 57, 0.237);
+  border-radius: 25px;
+  background-color: rgba(137, 137, 137, 0.129);
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
@@ -723,6 +751,9 @@ footer .footer__me {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+.contact .contact__arrow {
+  display: none;
+}
 
 @media (min-width: 668px) and (max-width: 1024px) {
   .contact h3 {
@@ -736,12 +767,20 @@ footer .footer__me {
 }
 @media (min-width: 1025px) {
   .contact {
-    padding-top: 4rem;
+    padding-top: 5.5rem;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
   }
-  .contact h3 {
-    max-width: 60%;
+  .contact .contact__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .contact__title .contact__arrow {
+    display: block;
+    width: 70px;
+  }
+  .contact .contact__title h3 {
     font-size: 1.9rem;
   }
   .contact form {
@@ -768,9 +807,9 @@ footer .footer__me {
     max-width: 1550px;
     margin-left: auto;
     margin-right: auto;
-    gap: 6rem;
+    gap: 10rem;
   }
-  .contact h3 {
+  .contact .contact__title h3 {
     font-size: 2.2rem;
   }
   .contact form {

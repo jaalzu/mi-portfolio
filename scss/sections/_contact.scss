@@ -70,6 +70,10 @@
         clip: rect(0, 0, 0, 0);
         border: 0;
       }
+
+      .contact__arrow{
+        display: none;
+      }
 }
 
 
@@ -91,18 +95,25 @@
 
 @include respond-to(desktop){
   .contact{
-    padding-top: 4rem;
+    padding-top: 5.5rem;
     flex-direction: row;
-    gap: 2rem;
-
-    h3{
-      max-width: 60%;
-      font-size: 1.9rem;
-    }
+    gap:3rem;
+.contact__title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .contact__arrow{
+    display: block;
+    width: 70px;
+  }
+  h3{
+    font-size: 1.9rem;
+  }
+}
 
     form{
       width: 100%;
-
       .form__group{
         margin-block: 1.5rem;
 
@@ -119,7 +130,9 @@
         }
       }
     }
+  
   }
+
 }
 
 
@@ -129,9 +142,12 @@
     max-width: 1550px;
     margin-left: auto;
     margin-right: auto;
-    gap: 6rem;
-    h3{
-      font-size: 2.2rem;
+    gap: 10rem;
+
+    .contact__title{
+      h3{
+        font-size: 2.2rem;
+      }
     }
 
     form{

@@ -20,6 +20,7 @@
             text-align: start;
             flex-direction: column;
             @include glass-effect();
+            
             color: $color-white;
             width: 100%;
             
@@ -32,60 +33,98 @@
             .proyecto__description{
                 margin-top: 1rem;
                 
+                
                 h3{
                     font-size: 1.7rem;
                     margin-bottom: .7rem;
                     line-height: 1.3;
                 }
 
-                .proyecto__link{
-                    color: $color-white;
-                    display: inline-flex;
-                    align-items: center;
+                // arrow effect in proyectos start
+                    a,
+                    span {
+                    position: relative;
+                    transition: all 0.3s ease;
+                    }
+
+                    a.arrow,
+                    span.arrow {
+                    display: flex;
                     text-decoration: underline;
+                    align-items: center;
                     font-size: 1.2rem;
-                    gap: .5rem;
-                    transition: .3s ease-in;
-                    &:hover{
-                        text-decoration: 1px solid underline $color-primary;
+                    color: $color-white;
                     }
 
-                    img{
-                        width: 20px;
-                    transition: .3s ease;
-
+                    a.arrow .arrow_icon,
+                    span.arrow .arrow_icon {
+                    position: relative;
+                    margin-left: 0.5em;
                     }
 
-                    &:hover img{
-                        transform: translateX(10px);
+                    a.arrow .arrow_icon svg,
+                    span.arrow .arrow_icon svg {
+                    transition: transform 0.3s 0.02s ease;
+                    margin-right: 1em;
                     }
+
+                    a.arrow .arrow_icon::before,
+                    span.arrow .arrow_icon::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: $color-white;
+                    transform: translateY(-50%);
+                    transition: width 0.3s ease;
+                    }
+
+                    a.arrow:hover .arrow_icon::before,
+                    span.arrow:hover .arrow_icon::before {
+                    width: 1em;
+                    }
+
+                    a.arrow:hover .arrow_icon svg,
+                    span.arrow:hover .arrow_icon svg {
+                    transform: translateX(0.75em);
+                    }
+                // arrow effect in proyectos end
+
+
+                   
                 }
 
                 .description__box{
+                    
                     display: flex;
-                    margin-top: 5rem;
+                    margin-top: 4rem;
                     margin-bottom:2rem;
                     gap: 1rem;
                     flex-wrap: wrap;
 
 
                     .description__box__item{
-                        border: 1px solid $color-primary;
-                        width: 90px;
-                        height: 40px;
+                        -webkit-box-shadow: 2px 6px 26px -18px rgba(0,216,245,1);
+-moz-box-shadow: 2px 6px 26px -18px rgba(0,216,245,1);
+box-shadow: 2px 6px 26px -18px rgba(0,216,245,1);
+                        border: 1px solid $color-white;
+                        width: 92px;
+                        height: 42px;
                         display: flex;
-                        color: $color-primary;
+                        color: $color-white;
                         align-items: center;
                         flex-wrap: wrap;
                         justify-content: center;
-                        border-radius: 20px;
-                        background-color: rgba(57, 57, 57, 0.237);
+                        border-radius: 25px;
+                        background-color: rgba(137, 137, 137, 0.129);
                     }
                 }
             }
         }
     }
-}
 
 
 @include respond-to(tablet){

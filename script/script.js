@@ -22,7 +22,7 @@ const copyToClipboard = element => {
     const tooltip = document.getElementById('tooltip');
     tooltip.innerText = '¡Copiado!';
     setTimeout(() => {
-        tooltip.innerText = 'Haz clic aquí para copiar'; // Volver al texto original después de un tiempo
+        tooltip.innerText = 'Haz click para copiar'; // Volver al texto original después de un tiempo
     }, 2000);
 }
 
