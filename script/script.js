@@ -8,7 +8,6 @@ menu.addEventListener('click',() => {
 
 
 
-
 const copyToClipboard = element => {
     const textToCopy = element.innerHTML;
 
@@ -37,3 +36,8 @@ function resetTooltip() {
     tooltip.style.visibility = 'hidden';
     tooltip.style.opacity = '0';
 }
+
+
+
+
+

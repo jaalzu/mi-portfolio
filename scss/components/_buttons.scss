@@ -12,7 +12,7 @@
     transition: .2s ease;
 
     &:hover{
-        transform: scale(1.08);
+        opacity: 0.7;
     }
 }
 
@@ -21,3 +21,50 @@
         margin-left: 1rem;
     }
 }
+
+
+
+
+  
+  .btn-link {
+    background-color: $color-primary;
+    color: $color-black;
+    display: block;
+    width: 100px;
+    border-radius: 5px;
+    padding: $spacing-small $spacing;
+    transition: $transition;
+    position: relative;
+    overflow: hidden;
+    &:after,
+    &:before {
+        @include icon-arrow();
+      transition: $transition;
+      opacity: 0;
+      display: block;
+      width: calc(#{$spacing-large} + #{$spacing-tiny});
+      position: absolute;
+      right: -26%;
+    }
+    &:before {
+      content: "";
+      background: transparent;
+      height: 100%;
+      border-radius: inherit;
+      top: 0;
+    }
+    &:after {
+      color: inherit;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover {
+      padding-left: $spacing-small;
+      padding-right: calc(#{$spacing-large} + #{$spacing-small});
+      &:after,
+      &:before {
+        right: 0px;
+        opacity: 1;
+      }
+    }
+  }

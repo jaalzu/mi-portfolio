@@ -34,7 +34,11 @@ border: 1px solid rgba(255, 255, 255, 0.11);
   }
 
 
- 
+  @mixin icon-arrow() {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: $right-arrow;
+  }
   
 
   @mixin sr-only {
