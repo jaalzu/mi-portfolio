@@ -1,72 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier Alzú | Portfolio</title>
+    <link rel="icon" sizes="32x32" href="public/imagenes/favicon/favicon-32x32.webp" type="image/png">
+<link rel="icon" sizes="192x192" href="public/imagenes/favicon/android-chrome-192x192.webp" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="public/imagenes/favicon/apple-touch-icon.webp">
 
+
+    <!-- meta keys start -->
+     
+    <meta property="og:title" content="Javier Alzú | Portfolio">
+    <meta property="og:description" content="Portfolio de Javier Alzú, diseñador web freelance especializado en la creación de sitios web elegantes y funcionales.">
+    <meta property="og:image" content="public/imagenes/op-img.webp">
+    <meta property="og:url" content="https://jaalzu.github.io/mi-portfolio/">
+    
+    <!-- meta keys end -->
+
+    <!-- link to css start  -->
+    <link rel="stylesheet" href="./css/style.min.css">
+    <!-- link to css end -->
+
+    <!-- link google fonts start -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <!-- link google fonts end -->
 
      <!-- font awesome start -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
      <!-- font awesome end  -->
 
-
-    <link rel="stylesheet" href="./css/style.css">
+   
 </head>
 <body>
 
+    <!-- header start here  -->
 <header id="header">
-    <nav id="nav">
-        
-
+    <!-- nav start -->
+    <nav id="nav" aria-label="Navegación principal">
         <div class="logo">
-            <a href="#">
-                <img src="public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.png" alt="LOGO DE JAVIER ALZU PORTFOLIO">
+            <a href="https://jaalzu.github.io/mi-portfolio/">
+                <img src="public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.webp" alt="Javier Alzú Portfolio" loading="lazy">
             </a>
         </div>
-        <ul class="nav__list" id="nav-list">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Sobre mi</a></li>
-            <li><a href="#">Contacto</a></li>
+        <ul class="nav__list" id="nav-list" >
+            <li><a href="#hero" aria-label="Ir al inicio">Inicio</a></li>
+            <li><a href="#proyectos" aria-label="Ver proyectos">Proyectos</a></li>
+            <li><a href="#about" aria-label="Saber más sobre mí">Sobre mi</a></li>
+            <li><a href="#contact" aria-label="Contactar">Contacto</a></li>
         </ul>
         <div class="nav__button">
-            <img src="public/imagenes/logo/menu_34dp_D9D9D9_FILL0_wght400_GRAD0_opsz40.svg" alt="" class="nav__menu" id="nav-menu">
+            <img src="public/imagenes/logo/menu_34dp_D9D9D9_FILL0_wght400_GRAD0_opsz40.svg" alt="Abrir menú de navegación" class="nav__menu" id="nav-menu">
         </div>
     </nav>
+    <!-- nav end -->
 
+    <!-- hero section -->
 <section class="hero" id="hero">
     <div class="hero__container">
         <div class="hero__title">
             <h1>Hola<span class="color-primary">!</span> soy  <span class="color-primary">Javier Alzú</span>, desarollador web.</h1>
         </div>
-        <div class="hero__subtitle"><p>
-            Frontend Developer de Chaco, Argentina 🌍. Transformo ideas en experiencias digitales a través de código limpio y funcional, combinando creatividad y tecnología para ofrecer soluciones efectivas, destacando por mi pasión y compromiso.
-         </p></div>
-        
+        <div class="hero__subtitle">
+            <p>
+              Frontend Developer de Chaco, Argentina 🌍. Transformo ideas en experiencias digitales a través de código limpio y funcional, combinando creatividad y tecnología para ofrecer soluciones efectivas, destacando por mi pasión y compromiso.
+             </p>
+        </div>
         <div class="hero__links">
-            <a href="" target="_blank"><img src="public/imagenes/github-brands-solid (1).svg" alt=""></a>
-            <a href="" target="_blank"><img src="public/imagenes/linkedin-in-brands-solid.svg" alt=""></a>
-            <a href="mailto:javieralzuu@gmail.com" target="_blank"><img src="public/imagenes/icons8-email-26.png" alt=""></a>
-            
+            <a href="https://github.com/jaalzu" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/github-brands-solid (1).svg" alt="Perfil de GitHub de Javier Alzú" loading="lazy"></a>
+            <a href="https://www.linkedin.com/in/javier-alzu-332ab2261" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/linkedin-in-brands-solid.svg" alt="Perfil de LinkedIn de Javier Alzú" loading="lazy"></a>
+            <a href="mailto:javieralzuu@gmail.com" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/icons8-email-26.png" alt="Enviar email a Javier Alzú" loading="lazy"></a>
         </div>
     </div>
 </section>
+    <!-- hero section end-->
+
 <div class="section-divider"></div>
 </header>
+    <!-- header end here  -->
 
 
 <main class="proyectos" id="proyectos">
-    <h2 class="section__title">Mis Proyectos</h2>
-<div class="proyectos__grid container">
+ <h2 class="section__title">Mis Proyectos</h2>
+  <div class="proyectos__grid container">
     <div class="proyectos__box">
-        <div class="proyecto__img"><img src="public/imagenes/proyectos/pagina-mk-digital.webp" alt=""></div>
+        <div class="proyecto__img"><img src="public/imagenes/proyectos/pagina-mk-digital.webp" alt="Landing page dedicada a una empresa de mk digital" loading="lazy"></div>
         <div class="proyecto__description">
             <h3>Landing page para un negocio de marketing digital.</h3>
-            <a class="btn-link">Ver sitio </a>
+            <a href="" class="btn-link" target="_blank" rel="noopener noreferrer">Ver sitio </a>
             <div class="description__box">
                 <div class="description__box__item">
                     <span>UX / UI</span>
@@ -80,11 +103,12 @@
             </div>
         </div>
     </div>
+
     <div class="proyectos__box">
-        <div class="proyecto__img"><img src="public/imagenes/proyectos/pagina-headphones.webp" alt=""></div>
+        <div class="proyecto__img"><img src="public/imagenes/proyectos/pagina-headphones.webp" alt="Landing page sobre auriculares " loading="lazy"></div>
         <div class="proyecto__description">
             <h3>Sitio web para una marca de auriculares.</h3>
-                       <a class="btn-link">Ver sitio </a>
+                       <a href="" class="btn-link" target="_blank" rel="noopener noreferrer">Ver sitio </a>
             <div class="description__box">
                 <div class="description__box__item">
                     <span>UX / UI</span>
@@ -95,15 +119,15 @@
                 <div class="description__box__item">
                     <span>SEO</span>
                 </div>
-              
             </div>
         </div>
     </div>
+
     <div class="proyectos__box">
-        <div class="proyecto__img"><img src="public/imagenes/proyectos/pagina-arquitectura.webp" alt=""></div>
+        <div class="proyecto__img"><img src="public/imagenes/proyectos/pagina-arquitectura.webp" alt="Landing page de un sitio web enfocado en la construcción de casas, mostrando proyectos y servicios" loading="lazy"></div>
         <div class="proyecto__description">
             <h3>Sitio web para empresa de arquitectura</h3>
-            <a class="btn-link">Ver sitio </a>
+            <a href="" class="btn-link" target="_blank" rel="noopener noreferrer">Ver sitio </a>
             <div class="description__box">
                 <div class="description__box__item">
                     <span>UX / UI</span>
@@ -117,10 +141,10 @@
     </div>
     
     <div class="proyectos__box">
-        <div class="proyecto__img"><img src="public/imagenes/proyectos/pagina-fylo.webp" alt=""></div>
+        <div class="proyecto__img"><img src="public/imagenes/proyectos/pagina-fylo.webp" alt="Landing page de Fylo, enfocada en soluciones de almacenamiento en la nube, con un diseño limpio y funcional" loading="lazy"></div>
         <div class="proyecto__description">
             <h3>Fylo landing page</h3>
-            <a class="btn-link">Ver sitio </a>
+            <a href="" class="btn-link" target="_blank" rel="noopener noreferrer">Ver sitio </a>
             <div class="description__box">
                 <div class="description__box__item">
                     <span>BUILD</span>
@@ -135,36 +159,36 @@
 
 
 <h2 class="section__title">Acerca de mi</h2>
-<section class="about container">
+<section class="about container" id="about">
     <div class="about__img">
-        <img src="public/imagenes/about/3232.webp" alt="">
+        <img src="public/imagenes/about/3232.webp" alt="fotografía de Javier Alzú, desarrollador web" loading="lazy">
     </div>
     <div class="about__description">
        <p>
        <strong> Me llamo Javier Alzú, tengo 24 años y más de un año de experiencia en programación</strong>. Tengo conocimientos en diseño UX/UI , desarrollo y SEO. 
        <br>
-        Me gusta crear sitios webs simples pero atractivos,enfocandome en la optimizacion y conversion.
-      
-    </p>
-        <br>
-        <p>
-            Realicé varios cursos, pero ninguno se asemeja al aprendizaje autodidacta. Fue el que me impulsó en esta carrera, dándome la capacidad de explorar, desarrollar y afrontar los problemas que se me presentan.
+       Me gusta crear sitios web simples pero atractivos, enfocándome en la optimización y conversión.
         </p>
         <br>
-       <p>
-        Poseo un <strong>nivel intermedio de inglés</strong> , con una gran capacidad para leer y escribir en el idioma. Estoy trabajando para mejorar mi fluidez oral.
-       </p>
-   
+        <p>
+        Realicé varios cursos, pero ninguno se asemeja al aprendizaje autodidacta. Fue el que me impulsó en esta carrera, dándome la capacidad de explorar, desarrollar y afrontar los problemas que se me presentan.
+        <br>
+        En constante evolución, superándome en cada proyecto y dando siempre el 100%.
+        </p>
+        <br>
+        <p>
+        Poseo un <strong>nivel intermedio de inglés</strong>, con una gran capacidad para leer y escribir en el idioma. Estoy trabajando para mejorar mi fluidez oral.
+        </p>
     <div class="about__tecnologias">
         <h3>Tecnologias que manejo</h3>
         <ul>
-            <li><img src="public/imagenes/about/svg/html5.svg" alt=""></li>
-            <li><img src="public/imagenes/about/svg/css.svg" alt=""></li>
-            <li><img src="public/imagenes/about/svg/sass.svg" alt=""></li>
-            <li><img src="public/imagenes/about/svg/javascript.svg" alt=""></li>
-            <li><img src="public/imagenes/about/svg/bootstrap.svg" alt=""></li>
-            <li><img src="public/imagenes/about/svg/Github_dark.svg" alt=""></li>
-            <li><img src="public/imagenes/about/svg/figma.svg" alt=""></li>
+            <li><img src="public/imagenes/about/svg/html5.svg" alt="HTML5" loading="lazy"></li>
+            <li><img src="public/imagenes/about/svg/css.svg" alt="CSS3" loading="lazy"></li>
+            <li><img src="public/imagenes/about/svg/sass.svg" alt="sass" loading="lazy"></li>
+            <li><img src="public/imagenes/about/svg/javascript.svg" alt="JavaScript" loading="lazy"></li>
+            <li><img src="public/imagenes/about/svg/bootstrap.svg" alt="Bootstrap " loading="lazy"></li>
+            <li><img src="public/imagenes/about/svg/Github_dark.svg" alt="github" loading="lazy"></li>
+            <li><img src="public/imagenes/about/svg/figma.svg" alt="Figma" loading="lazy"></li>
         </ul>
     </div>
 </div>
@@ -173,30 +197,29 @@
 
 
 
-<section class="contact">
+<section class="contact" id="contact">
     <div class="contact__title">
-        <h3>Si te gusto mi trabajo colaboremos juntos en tu proximo proyecto!</h3>
-        <img class="contact__arrow" src="/public/imagenes/lineas/flecha-izquierda - copia.png" alt="">
+        <h3>Si te gustó mi trabajo, colaboremos juntos en tu próximo proyecto!</h3>
+        <img class="contact__arrow" src="/public/imagenes/lineas/flecha-izquierda - copia.png" alt="Flecha apuntando al formulario de contacto" loading="lazy">
     </div>
     <form action="https://formspree.io/f/xyzykedo" method="POST" class="contact-form" id="contact-form">
         <div class="desktop__group">
-
             <div class="form__group">
-                <label for="name">Nombre Completo<span class="sr-only">Campo obligatorio</span></label>
+                <label for="name">Nombre Completo</label>
                 <input type="text" id="name" name="name" required aria-required="true" placeholder="Javier Alzú" autocomplete="name">
             </div>
             <div class="form__group">
-                <label for="email">Correo Electrónico<span class="sr-only">Campo obligatorio</span></label>
+                <label for="email">Correo Electrónico</label>
                 <input type="email" id="email" name="email" required aria-required="true" placeholder="javalzu@gmail.com" autocomplete="email">
             </div>
         </div>
         
         <div class="form__group">
-          <label for="message">Deja tu mensaje!<span class="sr-only">Campo obligatorio</span></label>
-          <textarea id="message" name="message" required aria-required="true" rows="1" placeholder="Escribe tu mensaje aquí"></textarea>
+          <label for="message">¡Deja tu mensaje!</label>
+          <textarea id="message" name="message" required aria-required="true" rows="1" placeholder="¿Tienes una idea en mente? ¡Hablemos!"></textarea>
         </div>
         
-        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+        <button type="submit" class="submit-btn" aria-label="Enviar mensaje de contacto">Enviar Mensaje</button>
       </form>
       
     </section>
@@ -205,33 +228,45 @@
 <footer class="footer" id="footer">
     <div class="footer__info">
         <div class="logo">
-            <img src="public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.png" alt="LOGO DE JAVIER ALZU PORTFOLIO">
+           <a href="https://jaalzu.github.io/mi-portfolio/">
+               <img src="public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.webp" alt="LOGO DE JAVIER ALZU PORTFOLIO" loading="lazy">
+            </a>
         </div>
      <div class="email-container">
-    <p id="email" onclick="copyToClipboard(this)" onmouseover="showTooltip()" onmouseout="resetTooltip()">javalzu@gmail.com</p>
+    <p id="email" onclick="copyToClipboard(this)" onmouseover="showTooltip()" onmouseout="resetTooltip()">javieralzuu@gmail.com</p>
     <span class="tooltip" id="tooltip">Haz click para copiar</span>
 </div>
     </div>
     <nav class="footer__nav">
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Sobre mi</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#header">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
         <div class="nav__links desktop">
-            <a href=""><img src="public/imagenes/github-brands-solid (1).svg" alt=""></a>
-            <a href=""><img src="public/imagenes/linkedin-in-brands-solid.svg" alt=""></a>
+            <a href="https://github.com/jaalzu" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub">
+                <img src="public/imagenes/github-brands-solid (1).svg" alt="GitHub" loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com/in/javier-alzu-332ab2261" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn">
+                <img src="public/imagenes/linkedin-in-brands-solid.svg" alt="LinkedIn" loading="lazy">
+            </a>
         </div>
     </nav>
         <div class="footer__links mobile">
-            <a href=""><img src="public/imagenes/github-brands-solid (1).svg" alt=""></a>
-            <a href=""><img src="public/imagenes/linkedin-in-brands-solid.svg" alt=""></a>
+            <a href="https://github.com/jaalzu" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub">
+                <img src="public/imagenes/github-brands-solid (1).svg" alt="GitHub" loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com/in/javier-alzu-332ab2261" target="_blank" rel="noopener   noreferrer"   aria-label="Perfil de LinkedIn">
+                <img src="public/imagenes/linkedin-in-brands-solid.svg" alt="LinkedIn" loading="lazy">
+            </a>
         </div>
         <div class="footer__me">
-            <span>Made by Javier Alzú :) </span>
+            <span>Made by Javier Alzú &#58;&#41; </span>
         </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="script/script.js"></script>
 </body>
 </html>

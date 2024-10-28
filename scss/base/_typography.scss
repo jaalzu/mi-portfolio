@@ -5,3 +5,9 @@ h1,h2,h3,h4,button{
 span,p,a,li{
     font-family: $ff-secondary;
 }
+
+.custom-popup{
+    background-color: $color-black;
+    color: $color-white;
+    font-family: $ff-primary;
+}

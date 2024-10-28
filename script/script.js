@@ -41,3 +41,41 @@ function resetTooltip() {
 
 
 
+const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        Swal.fire({
+          icon: 'success',
+          title: '¡Enviado!',
+          text: 'Tu mensaje ha sido enviado exitosamente.',
+          confirmButtonColor: '#00D8F5',
+          timer:3000,
+          timerProgressBar:true,
+           confirmButtonText: 'Cerrar',
+          customClass:{
+            popup:'custom-popup', // clase ubicada en typography.
+          }
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Hubo un problema al enviar el formulario, por favor inténtalo nuevamente.',
+        });
+      }
+    });
+  });
+
