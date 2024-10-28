@@ -11,7 +11,7 @@
         .hero__title h1{
             margin-bottom: 2.3rem;
             line-height: 1.1;
-            font-size: clamp(3.1rem,4.2vw,4.5rem);
+            font-size: clamp(3.1rem,4.2vw,4.3rem);
             max-width: 95%;
             color: $color-white;
             
@@ -67,15 +67,15 @@
 .hero{
     .hero__container{
         margin-top: 3.5rem;
-        
 
         .hero__title h1{
-            max-width: 70%;
+            width: 100%;
         }
 
         .hero__subtitle p{
-            max-width: 70%;
+            max-width: 75%;
             margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
     }
 }

@@ -19,12 +19,12 @@
     <!-- meta keys end -->
 
     <!-- link to css start  -->
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- link to css end -->
 
     <!-- link google fonts start -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <!-- link google fonts end -->
 
@@ -42,7 +42,7 @@
     <nav id="nav" aria-label="Navegación principal">
         <div class="logo">
             <a href="https://jaalzu.github.io/mi-portfolio/">
-                <img src="public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.webp" alt="Javier Alzú Portfolio" >
+                <img src="public/imagenes/logo/javalzu-high-resolution-logo-white-transparent.webp" width="150" height="150" alt="Javier Alzú Portfolio" >
             </a>
         </div>
         <ul class="nav__list" id="nav-list" >
@@ -52,7 +52,7 @@
             <li><a href="#contact" aria-label="Contactar">Contacto</a></li>
         </ul>
         <div class="nav__button">
-            <img src="public/imagenes/logo/menu_34dp_D9D9D9_FILL0_wght400_GRAD0_opsz40.svg" alt="Abrir menú de navegación" class="nav__menu" id="nav-menu">
+            <img src="public/imagenes/logo/menu_34dp_D9D9D9_FILL0_wght400_GRAD0_opsz40.svg" alt="Abrir menú de navegación" class="nav__menu" id="nav-menu" width="40" height="40">
         </div>
     </nav>
     <!-- nav end -->
@@ -266,7 +266,7 @@
         </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="script/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+<script src="script/script.js" defer></script>
 </body>
 </html>
