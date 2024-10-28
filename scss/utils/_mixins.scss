@@ -38,17 +38,9 @@ border: 1px solid rgba(255, 255, 255, 0.11);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: $right-arrow;
+    font-display: "swap";
   }
   
 
-  @mixin sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
+  
   

@@ -33,7 +33,7 @@
   display: block;
   width: 100px;
   border-radius: 5px;
-  padding: 0.2rem 1rem;
+  padding: 0.15rem 1rem;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -42,6 +42,7 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f14c";
+  font-display: "swap";
   transition: all 0.4s ease;
   opacity: 0;
   display: block;
@@ -62,8 +63,8 @@
   transform: translateY(-50%);
 }
 .btn-link:hover {
-  padding-left: 0.2rem;
-  padding-right: calc(1.4rem + 0.2rem);
+  padding-left: 0.15rem;
+  padding-right: calc(1.4rem + 0.15rem);
 }
 .btn-link:hover:after, .btn-link:hover:before {
   right: 0px;
@@ -108,12 +109,25 @@ body {
   color: rgb(19, 19, 19);
 }
 
-strong {
-  color: #EAEAEA;
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
 }
 
 .container {
   max-width: 1400px;
+}
+
+strong {
+  color: #EAEAEA;
 }
 
 .section__title {
@@ -137,19 +151,6 @@ strong {
 }
 .color-primary {
   color: #00D8F5;
-}
-
-p {
-  font-size: 1rem;
-}
-
-h1 {
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 1.75rem;
-  font-weight: 600;
 }
 
 h1, h2, h3, h4, button {
@@ -266,7 +267,7 @@ nav .show-menu {
   font-family: "Raleway", sans-serif;
 }
 .hero .hero__container .hero__subtitle p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #EAEAEA;
 }
 .hero .hero__container .hero__links {
@@ -276,8 +277,8 @@ nav .show-menu {
   margin-top: 3rem;
 }
 .hero .hero__container .hero__links img {
-  width: 33px;
-  height: 33px;
+  width: 34px;
+  height: 34px;
   transition: 0.3s ease;
 }
 .hero .hero__container .hero__links img:hover {
@@ -300,12 +301,12 @@ nav .show-menu {
     margin-top: 3.5rem;
   }
   .hero .hero__container .hero__title h1 {
-    width: 100%;
+    width: 75%;
   }
   .hero .hero__container .hero__subtitle p {
     max-width: 75%;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 1300px) {
@@ -318,7 +319,7 @@ nav .show-menu {
   }
   .hero .hero__container .hero__title h1 {
     margin-bottom: 0;
-    max-width: 100%;
+    width: 100%;
   }
   .hero .hero__container .hero__subtitle p {
     margin-top: 2rem;

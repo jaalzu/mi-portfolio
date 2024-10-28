@@ -21,7 +21,7 @@
         }
 
         .hero__subtitle p{
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: $color-white;
         }
 
@@ -32,8 +32,8 @@
             margin-top: 3rem;
 
             img{
-                width: 33px;
-                height: 33px;
+                width: 34px;
+                height: 34px;
                 transition: 0.3s ease;
                 &:hover{
                     transform: translateY(-6px);
@@ -69,7 +69,7 @@
         margin-top: 3.5rem;
 
         .hero__title h1{
-            width: 100%;
+            width: 75%;
         }
 
         .hero__subtitle p{
@@ -91,7 +91,7 @@
             width: 100%;
             .hero__title h1{
                 margin-bottom: 0;
-                max-width: 100%;
+                width: 100%;
             }
 
             .hero__subtitle p{

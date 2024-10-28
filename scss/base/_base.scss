@@ -11,13 +11,26 @@ body {
     color: $color-black; 
   }
 
-strong{
-  color: $color-white;
-}
+  p {
+    font-size: 1rem;
+  }
+  
+  h1 {
+    font-weight: 700; 
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
 
-.container{
-  max-width: 1400px;
-}
+  .container{
+    max-width: 1400px;
+  }
+
+  strong{
+    color: $color-white;
+  }
 
 .section__title{
   text-align: center;
@@ -40,26 +53,10 @@ strong{
     }
   }
 
-
-
 .color-primary{
   color: $color-primary;
 }
 
- 
 
-
-  p {
-    font-size: 1rem;
-  }
-  
-  h1 {
-    font-weight: 700; 
-  }
-  
-  h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
-  }
 
  

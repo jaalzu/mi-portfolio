@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier Alzú | Portfolio</title>
     <link rel="icon" sizes="32x32" href="public/imagenes/favicon/favicon-32x32.webp" type="image/png">
-<link rel="icon" sizes="192x192" href="public/imagenes/favicon/android-chrome-192x192.webp" type="image/png">
-<link rel="apple-touch-icon" sizes="180x180" href="public/imagenes/favicon/apple-touch-icon.webp">
+    <link rel="icon" sizes="192x192" href="public/imagenes/favicon/android-chrome-192x192.webp" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/imagenes/favicon/apple-touch-icon.webp">
 
 
     <!-- meta keys start -->
@@ -23,8 +23,8 @@
     <!-- link to css end -->
 
     <!-- link google fonts start -->
-    <link rel="preload" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <!-- link google fonts end -->
 
@@ -69,9 +69,9 @@
              </p>
         </div>
         <div class="hero__links">
-            <a href="https://github.com/jaalzu" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/github-brands-solid (1).svg" alt="Perfil de GitHub de Javier Alzú" ></a>
-            <a href="https://www.linkedin.com/in/javier-alzu-332ab2261" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/linkedin-in-brands-solid.svg" alt="Perfil de LinkedIn de Javier Alzú" ></a>
-            <a href="mailto:javieralzuu@gmail.com" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/icons8-email-26.png" alt="Enviar email a Javier Alzú" ></a>
+            <a href="https://github.com/jaalzu" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/github-brands-solid (1).svg" alt="Perfil de GitHub de Javier Alzú" loading="lazy"></a>
+            <a href="https://www.linkedin.com/in/javier-alzu-332ab2261" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/linkedin-in-brands-solid.svg" alt="Perfil de LinkedIn de Javier Alzú" loading="lazy"></a>
+            <a href="mailto:javieralzuu@gmail.com" target="_blank" rel="noopener noreferrer"><img src="public/imagenes/icons8-email-26.png" alt="Enviar email a Javier Alzú" loading="lazy"></a>
         </div>
     </div>
 </section>
@@ -157,7 +157,6 @@
 
 
 
-
 <h2 class="section__title">Acerca de mi</h2>
 <section class="about container" id="about">
     <div class="about__img">
@@ -209,14 +208,14 @@
                 <input type="text" id="name" name="name" required  placeholder="Javier Alzú" autocomplete="name">
             </div>
             <div class="form__group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" required  placeholder="javalzu@gmail.com" autocomplete="email">
+                <label for="email-user">Correo Electrónico</label>
+                <input type="email" id="email" name="email-user" for="email-user" required  placeholder="javalzu@gmail.com" autocomplete="email">
             </div>
         </div>
         
         <div class="form__group">
           <label for="message">¡Deja tu mensaje!</label>
-          <textarea id="message" name="message" required  rows="1" placeholder="¿Tienes una idea en mente? ¡Hablemos!"></textarea>
+          <textarea id="message" name="message" required  rows="1" placeholder="Deja tu mensaje!"></textarea>
         </div>
         
         <button type="submit" class="submit-btn" aria-label="Enviar mensaje de contacto">Enviar Mensaje</button>
