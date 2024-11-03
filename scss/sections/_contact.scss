@@ -14,7 +14,8 @@
   form{
     display: flex;
     flex-direction: column;
-
+    @include glass-effect();
+    padding:1.5rem;
     .form__group{
       display: flex;
       flex-direction: column;

@@ -24,47 +24,75 @@
 
 
 
+.chronicle-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  line-height: 1;
+  border-radius: 0.4rem;
+  width: 90px;
+  height: 27px;
+  padding: 0; // Asegúrate de que ambos botones tengan el mismo padding
+  cursor: pointer;
+  border: none;
+  background: $color-primary;
+  transition: background 0.3s linear;
+  will-change: background;
 
-  
-  .btn-link {
-    background-color: $color-primary;
-    color: $color-black;
-    display: block;
-    width: 100px;
-    border-radius: 5px;
-    padding: $spacing-small $spacing;
-    transition: $transition;
-    position: relative;
-    overflow: hidden;
-    &:after,
-    &:before {
-        @include icon-arrow();
-      transition: $transition;
+  &:hover {
+    background: $color-primary;
+
+    span:nth-of-type(1) em {
       opacity: 0;
-      display: block;
-      width: calc(#{$spacing-large} + #{$spacing-tiny});
-      position: absolute;
-      right: -26%;
+      transform: rotateX(90deg) scaleX(0.9) translate3d(0, -10px, 0);
     }
-    &:before {
-      content: "";
-      background: transparent;
-      height: 100%;
-      border-radius: inherit;
-      top: 0;
-    }
-    &:after {
-      color: inherit;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    &:hover {
-      padding-left: $spacing-small;
-      padding-right: calc(#{$spacing-large} + #{$spacing-small});
-      &:after,
-      &:before {
-        right: 0px;
-        opacity: 1;
-      }
+
+    span:nth-of-type(2) em {
+      opacity: 1;
+      transform: rotateX(0deg) scaleX(1) translateZ(0);
+      transition: transform 0.55s cubic-bezier(0.645, 0.045, 0.355, 1),
+                  opacity 0.35s linear 0.2s;
     }
   }
+
+  span {
+    position: relative;
+    display: block;
+    perspective: 108px;
+
+    &:nth-of-type(2) {
+      position: absolute;
+    }
+
+    em {
+      font-style: normal;
+      display: inline-block;
+      font-size: 0.8rem; // Asegúrate de que el tamaño de fuente sea el mismo en ambos botones
+      font-weight: $fw-bold;
+      color: $color-black;
+      will-change: transform, opacity, transition;
+      transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1),
+                  opacity 0.35s linear 0.2s;
+    }
+
+    &:nth-of-type(1) em {
+      transform-origin: top;
+    }
+
+    &:nth-of-type(2) em {
+      opacity: 0;
+      transform: rotateX(-90deg) scaleX(0.9) translate3d(0, 10px, 0);
+      transform-origin: bottom;
+    }
+  }
+}
+
+.chronicle-button.secondary {
+  background-color: $color-white;
+
+  em {
+    color: $color-black; // Cambia solo el color del texto, no el tamaño ni el estilo
+  }
+}

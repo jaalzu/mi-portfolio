@@ -30,6 +30,13 @@
             }
             
             .proyecto__description{
+                
+                .group__buttons{
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+
                 margin-top: 1rem;
                 
                 h3{

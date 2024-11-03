@@ -27,48 +27,66 @@
     margin-left: 1rem;
   }
 }
-.btn-link {
-  background-color: #00D8F5;
-  color: rgb(19, 19, 19);
-  display: block;
-  width: 100px;
-  border-radius: 5px;
-  padding: 0.15rem 1rem;
-  transition: all 0.4s ease;
-  position: relative;
+.chronicle-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  line-height: 1;
+  border-radius: 0.4rem;
+  width: 90px;
+  height: 27px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: #00D8F5;
+  transition: background 0.3s linear;
+  will-change: background;
 }
-.btn-link:after, .btn-link:before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f14c";
-  font-display: "swap";
-  transition: all 0.4s ease;
+.chronicle-button:hover {
+  background: #00D8F5;
+}
+.chronicle-button:hover span:nth-of-type(1) em {
   opacity: 0;
-  display: block;
-  width: calc(1.4rem + 0.25rem);
-  position: absolute;
-  right: -26%;
+  transform: rotateX(90deg) scaleX(0.9) translate3d(0, -10px, 0);
 }
-.btn-link:before {
-  content: "";
-  background: transparent;
-  height: 100%;
-  border-radius: inherit;
-  top: 0;
-}
-.btn-link:after {
-  color: inherit;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.btn-link:hover {
-  padding-left: 0.15rem;
-  padding-right: calc(1.4rem + 0.15rem);
-}
-.btn-link:hover:after, .btn-link:hover:before {
-  right: 0px;
+.chronicle-button:hover span:nth-of-type(2) em {
   opacity: 1;
+  transform: rotateX(0deg) scaleX(1) translateZ(0);
+  transition: transform 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s linear 0.2s;
+}
+.chronicle-button span {
+  position: relative;
+  display: block;
+  perspective: 108px;
+}
+.chronicle-button span:nth-of-type(2) {
+  position: absolute;
+}
+.chronicle-button span em {
+  font-style: normal;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgb(19, 19, 19);
+  will-change: transform, opacity, transition;
+  transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s linear 0.2s;
+}
+.chronicle-button span:nth-of-type(1) em {
+  transform-origin: top;
+}
+.chronicle-button span:nth-of-type(2) em {
+  opacity: 0;
+  transform: rotateX(-90deg) scaleX(0.9) translate3d(0, 10px, 0);
+  transform-origin: bottom;
+}
+
+.chronicle-button.secondary {
+  background-color: #EAEAEA;
+}
+.chronicle-button.secondary em {
+  color: rgb(19, 19, 19);
 }
 
 * {
@@ -508,6 +526,11 @@ footer .footer__me {
 .proyectos .proyectos__grid .proyectos__box .proyecto__description {
   margin-top: 1rem;
 }
+.proyectos .proyectos__grid .proyectos__box .proyecto__description .group__buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
 .proyectos .proyectos__grid .proyectos__box .proyecto__description h3 {
   font-size: 1.7rem;
   margin-bottom: 1.6rem;
@@ -623,21 +646,26 @@ footer .footer__me {
 .about .about__description .about__tecnologias {
   margin-top: 3rem;
 }
+.about .about__description .about__tecnologias div {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 2px 15px rgba(255, 255, 255, 0.1);
+}
+.about .about__description .about__tecnologias #card {
+  background-image: linear-gradient(rgb(19, 19, 19), rgb(19, 19, 19)), linear-gradient(calc(var(--rotation)), #888 0, #444 20%, transparent 80%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  position: relative;
+}
 .about .about__description .about__tecnologias h3 {
   margin-bottom: 1.3rem;
   color: #EAEAEA;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .about .about__description .about__tecnologias ul {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2.6px);
-  -webkit-backdrop-filter: blur(2.6px);
-  border: 1px solid rgba(255, 255, 255, 0.11);
   padding-block: 1.4rem;
   padding-inline: 0.5rem;
 }
@@ -716,6 +744,13 @@ footer .footer__me {
 .contact form {
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(2.6px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  padding: 1.5rem;
 }
 .contact form .form__group {
   display: flex;
