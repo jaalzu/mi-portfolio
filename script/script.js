@@ -9,24 +9,26 @@ menu.addEventListener('click',() => {
 })
 
 
-  // Selecciona todas las miniaturas
-  const thumbnailContainers = document.querySelectorAll('.thumbnail-container');
-  // Selecciona la imagen principal
-  const mainImage = document.getElementById('mainImage');
+  // Selecciona todos los contenedores de proyectos
+const proyectosContainers = document.querySelectorAll('.proyectos__img__responsive');
 
-  // Agrega un evento de clic a cada miniatura
-  thumbnailContainers.forEach(thumbnail => {
-      thumbnail.addEventListener('click', () => {
-          // Cambia la fuente de la imagen principal por la fuente de la miniatura
-          mainImage.src = thumbnail.querySelector('.img-thumbnail').src;
+proyectosContainers.forEach(container => {
+    const mainImage = container.querySelector('.main-image');
+    const thumbnailContainers = container.querySelectorAll('.thumbnail-container');
 
-          // Remueve la clase 'active' de todas las miniaturas
-          thumbnailContainers.forEach(thumb => thumb.classList.remove('active'));
+    thumbnailContainers.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            mainImage.src = thumbnail.querySelector('.img-thumbnail').src;
 
-          // Agrega la clase 'active' a la miniatura seleccionada
-          thumbnail.classList.add('active');
-      });
-  });
+            // Quita la clase 'active' de todas las miniaturas en este contenedor
+            thumbnailContainers.forEach(thumb => thumb.classList.remove('active'));
+
+            // Agrega la clase 'active' a la miniatura seleccionada
+            thumbnail.classList.add('active');
+        });
+    });
+});
+
 
 
 
