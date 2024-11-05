@@ -12,7 +12,7 @@
             margin-bottom: 2.3rem;
             line-height: 1.1;
             font-size: clamp(3.1rem,4.2vw,4.3rem);
-            max-width: 95%;
+            max-width: 100%;
             color: $color-white;
             
             span{
@@ -50,13 +50,8 @@
     .hero{
         .hero__container{
             margin-top: 4rem;
-            .hero__title h1{
-                text-align: center;
-
-            }
-            .hero__subtitle p{
-                text-align: center;
-            }
+            
+            
             
         }
     }
@@ -91,12 +86,14 @@
             width: 100%;
             .hero__title h1{
                 margin-bottom: 0;
+                margin-right: 15rem;
                 width: 100%;
             }
 
             .hero__subtitle p{
+                font-size: 1.1rem;
                 margin-top: 2rem;
-                margin-left: 7rem;
+                margin-left: 4rem;
             }
 
             .hero__links{

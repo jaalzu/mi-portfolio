@@ -278,7 +278,7 @@ nav .show-menu {
   margin-bottom: 2.3rem;
   line-height: 1.1;
   font-size: clamp(3.1rem, 4.2vw, 4.3rem);
-  max-width: 95%;
+  max-width: 100%;
   color: #EAEAEA;
 }
 .hero .hero__container .hero__title h1 span {
@@ -307,12 +307,6 @@ nav .show-menu {
   .hero .hero__container {
     margin-top: 4rem;
   }
-  .hero .hero__container .hero__title h1 {
-    text-align: center;
-  }
-  .hero .hero__container .hero__subtitle p {
-    text-align: center;
-  }
 }
 @media (min-width: 1025px) {
   .hero .hero__container {
@@ -337,11 +331,13 @@ nav .show-menu {
   }
   .hero .hero__container .hero__title h1 {
     margin-bottom: 0;
+    margin-right: 15rem;
     width: 100%;
   }
   .hero .hero__container .hero__subtitle p {
+    font-size: 1.1rem;
     margin-top: 2rem;
-    margin-left: 7rem;
+    margin-left: 4rem;
   }
   .hero .hero__container .hero__links {
     flex-direction: column;
@@ -750,7 +746,7 @@ footer .footer__me {
   backdrop-filter: blur(2.6px);
   -webkit-backdrop-filter: blur(2.6px);
   border: 1px solid rgba(255, 255, 255, 0.11);
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .contact form .form__group {
   display: flex;
@@ -824,6 +820,7 @@ footer .footer__me {
   }
   .contact form {
     width: 100%;
+    padding: 2rem;
   }
   .contact form .form__group {
     margin-block: 1.5rem;
