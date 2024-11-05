@@ -10,6 +10,29 @@ menu.addEventListener('click',() => {
 
 
 
+
+// google analytics script 
+  window.addEventListener('load', function() {
+    // Carga de Google Analytics después de que la página esté completamente cargada
+    var script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-WF4DKBP52Z";
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Configuración de Google Analytics
+    script.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WF4DKBP52Z');
+    };
+  });
+
+
+
+
+
+
 // projects images change 
 const proyectosContainers = document.querySelectorAll('.proyectos__img__responsive');
 
