@@ -3,7 +3,7 @@
   flex-direction: column;
   padding-inline: $padding-inline-mobile;
   height: 100%;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 
   h3{
     font-size: 1.8rem;
@@ -16,10 +16,11 @@
     flex-direction: column;
     @include glass-effect();
     padding:1rem;
+    padding-bottom: 3rem;
     .form__group{
       display: flex;
       flex-direction: column;
-      margin-block: 1.4rem;
+      margin-block: 1.7rem;
       width: 90%;
       
       
@@ -104,7 +105,7 @@
     form{
       width: 100%;
     padding:2rem;
-
+      padding-bottom: 3rem;
       .form__group{
         margin-block: 1.5rem;
 

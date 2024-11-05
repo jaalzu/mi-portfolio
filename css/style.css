@@ -277,7 +277,7 @@ nav .show-menu {
 .hero .hero__container .hero__title h1 {
   margin-bottom: 2.3rem;
   line-height: 1.1;
-  font-size: clamp(3.1rem, 4.2vw, 4.3rem);
+  font-size: clamp(3rem, 4.2vw, 4.3rem);
   max-width: 100%;
   color: #EAEAEA;
 }
@@ -360,6 +360,7 @@ footer {
 }
 footer .footer__info {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
@@ -373,7 +374,8 @@ footer .footer__info .email-container {
   cursor: pointer;
 }
 footer .footer__info .email-container #email {
-  font-size: 1.3rem;
+  display: flex;
+  font-size: 1.2rem;
   color: #EAEAEA;
 }
 footer .footer__info .email-container .tooltip {
@@ -430,6 +432,9 @@ footer .footer__me {
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
+  footer .footer__info {
+    flex-direction: row;
+  }
   footer .footer__info .logo {
     width: 120px;
   }
@@ -453,6 +458,7 @@ footer .footer__me {
   }
   .footer .footer__info {
     margin-bottom: 2rem;
+    flex-direction: row;
   }
   .footer .footer__info .logo {
     width: 130px;
@@ -502,6 +508,7 @@ footer .footer__me {
   display: flex;
   justify-content: space-evenly;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .proyectos .proyectos__img__responsive .thumbnail-container {
   width: auto;
@@ -561,12 +568,10 @@ footer .footer__me {
   color: #EAEAEA;
   width: 100%;
 }
-.proyectos .proyectos__grid .proyectos__box .proyecto__description {
-  margin-top: 1rem;
-}
 .proyectos .proyectos__grid .proyectos__box .proyecto__description .group__buttons {
   display: inline-flex;
   align-items: center;
+  margin-block: 0.5rem;
   gap: 1rem;
 }
 .proyectos .proyectos__grid .proyectos__box .proyecto__description h3 {
@@ -785,7 +790,7 @@ footer .footer__me {
   flex-direction: column;
   padding-inline: 6vw;
   height: 100%;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 .contact h3 {
   font-size: 1.8rem;
@@ -802,11 +807,12 @@ footer .footer__me {
   -webkit-backdrop-filter: blur(2.6px);
   border: 1px solid rgba(255, 255, 255, 0.11);
   padding: 1rem;
+  padding-bottom: 3rem;
 }
 .contact form .form__group {
   display: flex;
   flex-direction: column;
-  margin-block: 1.4rem;
+  margin-block: 1.7rem;
   width: 90%;
 }
 .contact form .form__group label {
@@ -876,6 +882,7 @@ footer .footer__me {
   .contact form {
     width: 100%;
     padding: 2rem;
+    padding-bottom: 3rem;
   }
   .contact form .form__group {
     margin-block: 1.5rem;

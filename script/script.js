@@ -9,7 +9,8 @@ menu.addEventListener('click',() => {
 })
 
 
-  // Selecciona todos los contenedores de proyectos
+
+// projects images change 
 const proyectosContainers = document.querySelectorAll('.proyectos__img__responsive');
 
 proyectosContainers.forEach(container => {
@@ -20,10 +21,9 @@ proyectosContainers.forEach(container => {
         thumbnail.addEventListener('click', () => {
             mainImage.src = thumbnail.querySelector('.img-thumbnail').src;
 
-            // Quita la clase 'active' de todas las miniaturas en este contenedor
+            
             thumbnailContainers.forEach(thumb => thumb.classList.remove('active'));
 
-            // Agrega la clase 'active' a la miniatura seleccionada
             thumbnail.classList.add('active');
         });
     });
