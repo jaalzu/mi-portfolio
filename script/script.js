@@ -9,6 +9,24 @@ menu.addEventListener('click',() => {
 })
 
 
+  // Selecciona todas las miniaturas
+  const thumbnailContainers = document.querySelectorAll('.thumbnail-container');
+  // Selecciona la imagen principal
+  const mainImage = document.getElementById('mainImage');
+
+  // Agrega un evento de clic a cada miniatura
+  thumbnailContainers.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+          // Cambia la fuente de la imagen principal por la fuente de la miniatura
+          mainImage.src = thumbnail.querySelector('.img-thumbnail').src;
+
+          // Remueve la clase 'active' de todas las miniaturas
+          thumbnailContainers.forEach(thumb => thumb.classList.remove('active'));
+
+          // Agrega la clase 'active' a la miniatura seleccionada
+          thumbnail.classList.add('active');
+      });
+  });
 
 
 
