@@ -18,11 +18,13 @@
             }
         }
 
-        .hero__subtitle p{
-            font-size: 1.2rem;
-            color: $color-white;
-            width: 100%;
+        .hero__subtitle{
             height: 100%;
+            width: 100%;
+            p{
+                font-size: 1.2rem;
+                color: $color-white;
+            }
         }
 
         .hero__links{

@@ -285,11 +285,13 @@ nav .show-menu {
 .hero .hero__container .hero__title h1 span {
   font-family: "Raleway", sans-serif;
 }
+.hero .hero__container .hero__subtitle {
+  height: 100%;
+  width: 100%;
+}
 .hero .hero__container .hero__subtitle p {
   font-size: 1.2rem;
   color: #EAEAEA;
-  width: 100%;
-  height: 100%;
 }
 .hero .hero__container .hero__links {
   display: flex;
