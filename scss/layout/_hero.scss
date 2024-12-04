@@ -21,6 +21,7 @@
         .hero__subtitle p{
             font-size: 1.2rem;
             color: $color-white;
+            aspect-ratio: 4/1;
         }
 
         .hero__links{
@@ -49,7 +50,9 @@
         .hero__container{
             margin-top: 4rem;
             
-            
+            .hero__subtitle p{
+                aspect-ratio: 5/1;
+            }
             
         }
     }
@@ -67,6 +70,8 @@
 
         .hero__subtitle p{
             max-width: 75%;
+            aspect-ratio: 7/1;
+
             margin-bottom: 1rem;
             font-size: 1.2rem;
         }
