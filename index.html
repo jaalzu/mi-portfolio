@@ -28,8 +28,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Precarga de las fuentes críticas -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<!-- Precarga de las fuentes críticas con font-display: swap -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@700&display=swap" as="style">
+
+<!-- Carga de fuentes con display swap -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+<!-- En caso de que no se soporte JS -->
 <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
 </noscript>
