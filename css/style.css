@@ -120,7 +120,6 @@ body {
   line-height: 1.4;
   background-color: rgb(19, 19, 19);
   font-family: "Nunito", sans-serif;
-  font-display: swap;
 }
 
 ::selection {
@@ -288,7 +287,8 @@ nav .show-menu {
 .hero .hero__container .hero__subtitle p {
   font-size: 1.2rem;
   color: #EAEAEA;
-  aspect-ratio: 4/1;
+  width: 100%;
+  height: 100%;
 }
 .hero .hero__container .hero__links {
   display: flex;
@@ -309,9 +309,6 @@ nav .show-menu {
   .hero .hero__container {
     margin-top: 4rem;
   }
-  .hero .hero__container .hero__subtitle p {
-    aspect-ratio: 5/1;
-  }
 }
 @media (min-width: 1025px) {
   .hero .hero__container {
@@ -321,8 +318,7 @@ nav .show-menu {
     width: 75%;
   }
   .hero .hero__container .hero__subtitle p {
-    max-width: 75%;
-    aspect-ratio: 7/1;
+    max-width: 85%;
     margin-bottom: 1rem;
     font-size: 1.2rem;
   }
